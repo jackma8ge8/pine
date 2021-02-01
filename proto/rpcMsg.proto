@@ -1,0 +1,16 @@
+syntax = "proto3";
+package message;
+
+import "session.proto";
+
+option go_package = "../rpc/message";
+
+
+message RPCMsg {
+    string From                 =1;
+    string Handler              =2;
+    int32 Type                   =3;
+    bytes  RawData              =4;
+    optional int32 RequestID    =5;
+	Session Session             =6;
+}

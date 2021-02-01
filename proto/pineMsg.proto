@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package message;
+
+option go_package = "../rpc/message";
+
+message PineMsg {
+    string Route = 1; 
+    optional int32 RequestID = 2; 
+    bytes Data = 3; 
+}
+
+message PineErrResp {
+    int32 Code = 1; 
+    optional string Message = 2; 
+}

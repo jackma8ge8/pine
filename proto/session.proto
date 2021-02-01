@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package message;
+
+option go_package = "../rpc/session";
+
+message Session {
+    string CID=1;
+    string UID=2;
+    map<string, string> Data = 3;
+}

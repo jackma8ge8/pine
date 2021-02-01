@@ -1,0 +1,14 @@
+Server:
+  SystemName: "example_pine_cluster"
+  ID: game1-0 # 唯一ID
+  Kind: game1 # 服务器类型
+  Host: 127.0.0.1 
+  Port: 3024 
+  IsConnector: true
+  Token: ksYNdrAo # 集群认证Token
+  LogType: "Console" # Console File 
+  LogLevel: "Debug" # Debug Info Warn Error
+
+Zookeeper:
+  Host: 127.0.0.1
+  Port: 2181

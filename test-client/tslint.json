@@ -1,0 +1,28 @@
+{
+  "extends": [
+    "tslint:recommended"
+  ],
+  "rules": {
+    "quotemark": [
+      true,
+      "single"
+    ],
+    "object-literal-sort-keys": false,
+    "ordered-imports": false,
+    "member-ordering": false,
+    "variable-name": false,
+    "jsx-no-multiline-js": false,
+    "jsx-no-lambda": false,
+    "jsx-boolean-value": false,
+    "no-console": false,
+    "interface-name": false,
+    "max-classes-per-file": false,
+    "jsx-no-string-ref": false,
+    "no-shadowed-variable": false,
+    "no-debugger": false,
+    "no-unused-expression": [
+      true,
+      "allow-fast-null-checks"
+    ]
+  }
+}
