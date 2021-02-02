@@ -1,0 +1,11 @@
+test
+debug
+node_modules
+__debug_bin
+log
+
+vendor
+handlermessage
+!example/*/handlermessage
+.cache
+dist
