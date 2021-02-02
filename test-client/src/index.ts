@@ -1,5 +1,5 @@
 import Pine from '@jackma8ge8/pine-client'
-import { Middleware } from 'pine-client/lib/common'
+import { Middleware } from '@jackma8ge8/pine-client/lib/common'
 
 (async () => {
 
