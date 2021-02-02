@@ -1,0 +1,6 @@
+{
+    "go.inferGopath": false,
+    "protoc": {
+        "path": "${workspaceFolder}/proto"
+    }
+}
