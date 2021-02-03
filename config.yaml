@@ -1,7 +1,7 @@
 Server:
   SystemName: "awesome_pine"
-  ID: ddz-0 # 唯一ID
-  Kind: ddz # 服务器类型
+  ID: connector-0 # 唯一ID
+  Kind: connector # 服务器类型
   Host: 127.0.0.1 
   Port: 3114 
   Token: ksYNdrAo # 集群认证Token
