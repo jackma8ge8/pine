@@ -23,7 +23,7 @@ func main() {
 
 	app := application.CreateApp()
 
-	compressservice.Event.AddEventCompressRecords("onMsg", "onMsgJSON") // 需要压缩的Event
+	compressservice.Event.AddRecords("onMsg", "onMsgJSON") // 需要压缩的Event
 
 	app.AsConnector(func(uid string, token string, sessionData map[string]string) error {
 
@@ -48,7 +48,7 @@ func main() {
 			Name: "HandlerResp",
 		}
 
-		rpcCtx.SendMsg(handlerResp)
+		rpcCtx.Response(handlerResp)
 
 	})
 
@@ -94,7 +94,7 @@ func main() {
 			logrus.Info("收到Rpc的回复：", fmt.Sprint(data))
 		})
 
-		rpcCtx.SendMsg(map[string]interface{}{
+		rpcCtx.Response(map[string]interface{}{
 			"Route":     "onMsgJSON",
 			"heiheihie": "heiheihei",
 		})
@@ -102,7 +102,7 @@ func main() {
 
 	app.RegisteRemoter("getOneRobot", func(rpcCtx *context.RPCCtx, data interface{}) {
 
-		rpcCtx.SendMsg(map[string]interface{}{
+		rpcCtx.Response(map[string]interface{}{
 			"name": "盖伦",
 			"sex":  1,
 			"age":  18,

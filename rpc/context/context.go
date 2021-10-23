@@ -68,12 +68,12 @@ func (rpcCtx *RPCCtx) SetRequestID(id int32) {
 	rpcCtx.requestID = &id
 }
 
-// SendMsg 消息发送失败
-func (rpcCtx *RPCCtx) SendMsg(data interface{}) {
+// Response 消息发送失败
+func (rpcCtx *RPCCtx) Response(data interface{}) {
 
 	requestID := rpcCtx.GetRequestID()
 
-	// Notify的消息，不通知成功
+	// Notify的消息，不通知
 	if requestID == 0 {
 		if data == nil {
 			return

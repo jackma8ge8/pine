@@ -9,3 +9,5 @@ handlermessage
 !example/*/handlermessage
 .cache
 dist
+
+/main.go

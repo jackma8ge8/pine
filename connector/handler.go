@@ -49,7 +49,7 @@ func registerConnectorHandler() {
 		}
 
 		if rpcCtx.GetRequestID() > 0 {
-			rpcCtx.SendMsg("")
+			rpcCtx.Response("")
 		}
 	})
 
@@ -85,10 +85,10 @@ func registerConnectorHandler() {
 		connection := GetConnection(data.UID)
 		var session *session.Session
 		if connection == nil {
-			rpcCtx.SendMsg("")
+			rpcCtx.Response("")
 		} else {
 			session = connection.GetSession()
-			rpcCtx.SendMsg(session)
+			rpcCtx.Response(session)
 		}
 
 	})
@@ -115,7 +115,7 @@ func registerConnectorHandler() {
 
 		if client != nil {
 			code := compressservice.Server.GetCodeByKind(client.ServerConfig.Kind)
-			rpcCtx.SendMsg(code)
+			rpcCtx.Response(code)
 		}
 	})
 

@@ -9,7 +9,7 @@ message handler { // 必须与app.RegisteHandler中注册的名字相同。且ap
     int32 Age = 2; 
 }
 // 这边有个约定：xxxHandler函数的response，在这边必须定义为xxxHandlerResp。否则客户端会因为找不到相应的protobuf描述而解析失败
-message handlerResp { // rpcCtx.SendMsg(resp) ，其中resp为handlerResp实例
+message handlerResp { // rpcCtx.Response(resp) ，其中resp为handlerResp实例
     int32 Code = 1; 
     string Message = 2; 
     string Name = 3; 

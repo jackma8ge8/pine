@@ -37,8 +37,8 @@ func (hs *handlerCompress) GetHandlers() []string {
 	return hs.handlers
 }
 
-// AddEventRecord 添加需要压缩的客户端监听的事件
-func (hs *handlerCompress) AddEventRecord(eventName string) {
+// AddRecord 添加需要压缩的客户端监听的事件
+func (hs *handlerCompress) AddRecord(eventName string) {
 	if _, exist := hs.handlerToCode[eventName]; !exist {
 		code := byte(len(hs.handlerToCode) + 1)
 		hs.handlerToCode[eventName] = code

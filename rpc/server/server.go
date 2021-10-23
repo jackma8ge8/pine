@@ -167,7 +167,7 @@ func registerProtoHandler() {
 		rpc.Request.ToServer(rpcCtx.From, rpcMsg, func(serverCode byte) {
 			// serverCode
 			result["serverCode"] = serverCode
-			rpcCtx.SendMsg(result)
+			rpcCtx.Response(result)
 		})
 	})
 }

@@ -6,8 +6,8 @@ type eventCompress struct {
 	events      []string
 }
 
-// AddEventRecord 添加需要压缩的客户端监听的事件
-func (ec *eventCompress) AddEventRecord(eventName string) {
+// AddRecord 添加需要压缩的客户端监听的事件
+func (ec *eventCompress) AddRecord(eventName string) {
 	if _, exist := ec.eventToCode[eventName]; !exist {
 		code := byte(len(ec.eventToCode) + 1)
 		ec.eventToCode[eventName] = code
@@ -16,10 +16,10 @@ func (ec *eventCompress) AddEventRecord(eventName string) {
 	}
 }
 
-// AddEventCompressRecords 添加路由压缩记录
-func (ec *eventCompress) AddEventCompressRecords(eventNames ...string) {
+// AddRecords 添加路由压缩记录
+func (ec *eventCompress) AddRecords(eventNames ...string) {
 	for _, eventName := range eventNames {
-		ec.AddEventRecord(eventName)
+		ec.AddRecord(eventName)
 	}
 }
 

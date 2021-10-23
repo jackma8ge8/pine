@@ -185,5 +185,5 @@ func (connection *Connection) Kick(data []byte) {
 }
 
 func init() {
-	compressservice.Event.AddEventRecord(SysHandlerMap.Kick)
+	compressservice.Event.AddRecord(SysHandlerMap.Kick)
 }
